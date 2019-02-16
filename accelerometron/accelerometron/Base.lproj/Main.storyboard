@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tdD-vi-qTF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Table View Controller-->
+        <scene sceneID="Pt4-hV-zrh">
+            <objects>
+                <tableViewController id="tdD-vi-qTF" customClass="ListTableViewController" customModule="accelerometron" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1nf-1g-ASk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parallaxCell" rowHeight="120" id="l4v-RQ-eoO" customClass="ParallaxCell" customModule="accelerometron" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l4v-RQ-eoO" id="DiV-rg-Zb2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="lzf-7K-Yee">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMERAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfx-Hq-iYB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.2830425941780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="119.5" id="MHR-MG-rrI"/>
+                                                <constraint firstAttribute="width" constant="375" id="x6X-ou-NMt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Avenir-HeavyOblique" family="Avenir" pointSize="50"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lzf-7K-Yee" secondAttribute="bottom" id="6FT-Y8-dk0"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zfx-Hq-iYB" secondAttribute="trailing" id="6eS-Kp-jtW"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zfx-Hq-iYB" secondAttribute="bottom" id="E9E-5W-VBF"/>
+                                        <constraint firstItem="Zfx-Hq-iYB" firstAttribute="leading" secondItem="DiV-rg-Zb2" secondAttribute="leading" id="Pwg-H6-w8Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="lzf-7K-Yee" secondAttribute="trailing" id="Zgo-qa-MGq"/>
+                                        <constraint firstItem="lzf-7K-Yee" firstAttribute="leading" secondItem="DiV-rg-Zb2" secondAttribute="leading" id="gF9-JI-CYY"/>
+                                        <constraint firstItem="Zfx-Hq-iYB" firstAttribute="top" secondItem="DiV-rg-Zb2" secondAttribute="top" id="kN2-QH-Ucn"/>
+                                        <constraint firstItem="lzf-7K-Yee" firstAttribute="top" secondItem="DiV-rg-Zb2" secondAttribute="top" id="nqm-le-593"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Zfx-Hq-iYB" id="G0X-XY-xu0"/>
+                                    <outlet property="itemImageView" destination="lzf-7K-Yee" id="u3h-sW-TDg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tdD-vi-qTF" id="8VJ-32-BGE"/>
+                            <outlet property="delegate" destination="tdD-vi-qTF" id="IyN-r6-mK4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fc2-v3-oWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="3" width="324" height="216"/>
+    </resources>
+</document>
