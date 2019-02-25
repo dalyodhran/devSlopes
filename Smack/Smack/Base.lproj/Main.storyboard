@@ -52,13 +52,6 @@
                                 <rect key="frame" x="281" y="87" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN3-WY-ajo">
-                                <rect key="frame" x="111" y="593" width="46" height="33"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kvv-tu-Qg9">
                                 <rect key="frame" x="16" y="572" width="75" height="75"/>
                                 <constraints>
@@ -117,10 +110,8 @@
                             <constraint firstItem="otu-xa-lYH" firstAttribute="top" secondItem="stI-Fr-EqS" secondAttribute="bottom" constant="20" id="LiT-qh-j5N"/>
                             <constraint firstItem="a20-kD-U2r" firstAttribute="trailing" secondItem="GKk-bX-dip" secondAttribute="trailing" constant="72" id="PWf-lx-4e0"/>
                             <constraint firstItem="6Os-JE-Yuy" firstAttribute="top" secondItem="GKk-bX-dip" secondAttribute="bottom" constant="20" id="Vb7-ql-HVL"/>
-                            <constraint firstItem="hN3-WY-ajo" firstAttribute="centerY" secondItem="kvv-tu-Qg9" secondAttribute="centerY" id="Zh3-TG-ZRq"/>
                             <constraint firstItem="GKk-bX-dip" firstAttribute="centerY" secondItem="otu-xa-lYH" secondAttribute="centerY" id="bCH-AO-P76"/>
                             <constraint firstItem="otu-xa-lYH" firstAttribute="leading" secondItem="a20-kD-U2r" secondAttribute="leading" constant="16" id="tUL-lj-ZNu"/>
-                            <constraint firstItem="hN3-WY-ajo" firstAttribute="leading" secondItem="kvv-tu-Qg9" secondAttribute="trailing" constant="20" id="uOj-vf-KQj"/>
                             <constraint firstItem="kvv-tu-Qg9" firstAttribute="top" secondItem="6Os-JE-Yuy" secondAttribute="bottom" constant="20" id="vqx-5a-Gow"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a20-kD-U2r"/>
