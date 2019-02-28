@@ -9,6 +9,13 @@
 import UIKit
 
 class CreateAccountVC: UIViewController {
+    
+    //Outlets
+    @IBOutlet weak var usernameText: UITextField!
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passText: UITextField!
+    @IBOutlet weak var userImg: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +29,28 @@ class CreateAccountVC: UIViewController {
         performSegue(withIdentifier: UNWIND, sender: nil)
     }
     
+    @IBAction func createAccountPressed(_ sender: Any) {
+        guard let email = emailText.text, emailText.text != "" else {
+            return
+        }
+        guard let pass = passText.text, passText.text != "" else {
+            return
+        }
+        
+        AuthService.instance.registerUser(email: email, password: pass) { (success) in
+            if success {
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                    if success {
+                        print("Logged in user", AuthService.instance.authToke)
+                    }
+                })
+            }
+        }
+    }
+    @IBAction func chooseAvatarPressed(_ sender: Any) {
+        
+    }
+    @IBAction func pickBGColorPressed(_ sender: Any) {
+        
+    }
 }

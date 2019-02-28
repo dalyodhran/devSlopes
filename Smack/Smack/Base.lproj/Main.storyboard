@@ -87,9 +87,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-4x-mMa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYY-4x-mMa">
                                 <rect key="frame" x="111" y="593" width="46" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,7 +109,10 @@
                             <constraint firstItem="otu-xa-lYH" firstAttribute="top" secondItem="stI-Fr-EqS" secondAttribute="bottom" constant="20" id="LiT-qh-j5N"/>
                             <constraint firstItem="a20-kD-U2r" firstAttribute="trailing" secondItem="GKk-bX-dip" secondAttribute="trailing" constant="72" id="PWf-lx-4e0"/>
                             <constraint firstItem="6Os-JE-Yuy" firstAttribute="top" secondItem="GKk-bX-dip" secondAttribute="bottom" constant="20" id="Vb7-ql-HVL"/>
+                            <constraint firstItem="wYY-4x-mMa" firstAttribute="centerY" secondItem="kvv-tu-Qg9" secondAttribute="centerY" id="aq4-xt-pFM"/>
                             <constraint firstItem="GKk-bX-dip" firstAttribute="centerY" secondItem="otu-xa-lYH" secondAttribute="centerY" id="bCH-AO-P76"/>
+                            <constraint firstItem="a20-kD-U2r" firstAttribute="bottom" secondItem="wYY-4x-mMa" secondAttribute="bottom" constant="41" id="hD1-YG-6Cw"/>
+                            <constraint firstItem="wYY-4x-mMa" firstAttribute="leading" secondItem="kvv-tu-Qg9" secondAttribute="trailing" constant="20" id="j4c-BP-FEK"/>
                             <constraint firstItem="otu-xa-lYH" firstAttribute="leading" secondItem="a20-kD-U2r" secondAttribute="leading" constant="16" id="tUL-lj-ZNu"/>
                             <constraint firstItem="kvv-tu-Qg9" firstAttribute="top" secondItem="6Os-JE-Yuy" secondAttribute="bottom" constant="20" id="vqx-5a-Gow"/>
                         </constraints>
@@ -158,7 +160,7 @@
                                     <action selector="closePressed:" destination="fD5-Zn-Wlf" eventType="touchUpInside" id="1jr-5T-a13"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cC-qA-Jpr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cC-qA-Jpr" customClass="roundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="286" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -263,7 +265,7 @@
                                     <action selector="closePressed:" destination="fD5-Zn-Wlf" eventType="touchUpInside" id="GAO-bT-WFz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-5a-Udb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5d-5a-Udb" customClass="roundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -274,6 +276,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="lDa-0r-A4h" eventType="touchUpInside" id="8x5-lP-0D3"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="f0p-Sm-W4q">
                                 <rect key="frame" x="62.5" y="121.5" width="250" height="136"/>
@@ -302,7 +307,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-FS-8kG">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -341,6 +346,7 @@
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="chooseAvatarPressed:" destination="lDa-0r-A4h" eventType="touchUpInside" id="Srx-U9-UTQ"/>
                                     <action selector="createAccountPressed:" destination="fD5-Zn-Wlf" eventType="touchUpInside" id="6bM-Gk-89N"/>
                                 </connections>
                             </button>
@@ -369,6 +375,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAccountPressed:" destination="fD5-Zn-Wlf" eventType="touchUpInside" id="pBy-6N-lps"/>
+                                    <action selector="pickBGColorPressed:" destination="lDa-0r-A4h" eventType="touchUpInside" id="fYk-lf-HYI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,6 +400,10 @@
                         <viewLayoutGuide key="safeArea" id="saj-yf-IAm"/>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="4Ak-3F-aWy" id="Hld-ka-VPO"/>
+                        <outlet property="passText" destination="pfo-qt-tnC" id="rtm-lB-WaO"/>
+                        <outlet property="userImg" destination="2vZ-7f-9r2" id="83h-60-lMK"/>
+                        <outlet property="usernameText" destination="BVb-26-uYT" id="6mI-bp-Xot"/>
                         <segue destination="f3X-OR-dgV" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="Ptx-W3-GFG"/>
                     </connections>
                 </viewController>
