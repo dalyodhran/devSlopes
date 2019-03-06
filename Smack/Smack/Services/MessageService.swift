@@ -35,7 +35,6 @@ class MessageService{
                 }catch let error{
                     debugPrint(error as Any)
                 }
-                print(self.channels[0].channelTitle)
                 completion(true)
             }else {
                 completion(false)
