@@ -120,6 +120,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="wYY-4x-mMa" id="ydO-Wu-oRi"/>
+                        <outlet property="userImg" destination="kvv-tu-Qg9" id="7I2-O8-nh7"/>
                         <segue destination="fD5-Zn-Wlf" kind="show" identifier="toLogin" id="ghE-94-VHv"/>
                     </connections>
                 </viewController>
@@ -171,6 +172,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="fD5-Zn-Wlf" eventType="touchUpInside" id="qcF-b8-D3L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE0-LS-7q8">
                                 <rect key="frame" x="88" y="336" width="199" height="26"/>
@@ -225,6 +229,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-cc-zia">
+                                <rect key="frame" x="169" y="215" width="37" height="37"/>
+                                <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -233,15 +241,20 @@
                             <constraint firstItem="aE0-LS-7q8" firstAttribute="top" secondItem="2cC-qA-Jpr" secondAttribute="bottom" id="9AK-f3-seg"/>
                             <constraint firstItem="bQl-1r-YBP" firstAttribute="top" secondItem="VTD-pX-8Si" secondAttribute="bottom" constant="40" id="Bkn-1n-CsR"/>
                             <constraint firstItem="2cC-qA-Jpr" firstAttribute="top" secondItem="bQl-1r-YBP" secondAttribute="bottom" constant="40" id="C6a-zY-JIA"/>
+                            <constraint firstItem="cx4-cc-zia" firstAttribute="centerY" secondItem="Xjq-DD-WGI" secondAttribute="centerY" constant="-100" id="EvY-jQ-HeH"/>
                             <constraint firstItem="VTD-pX-8Si" firstAttribute="centerX" secondItem="Xjq-DD-WGI" secondAttribute="centerX" id="L5y-9K-3ZZ"/>
                             <constraint firstItem="iC1-pf-tbW" firstAttribute="top" secondItem="aHG-Wu-pIw" secondAttribute="top" constant="8" id="YcJ-pi-2YT"/>
                             <constraint firstItem="aE0-LS-7q8" firstAttribute="centerX" secondItem="Xjq-DD-WGI" secondAttribute="centerX" id="hC2-w1-AV6"/>
                             <constraint firstItem="2cC-qA-Jpr" firstAttribute="centerX" secondItem="Xjq-DD-WGI" secondAttribute="centerX" id="nOc-52-hij"/>
                             <constraint firstItem="aHG-Wu-pIw" firstAttribute="trailing" secondItem="iC1-pf-tbW" secondAttribute="trailing" constant="16" id="wAi-J3-wqP"/>
+                            <constraint firstItem="cx4-cc-zia" firstAttribute="centerX" secondItem="Xjq-DD-WGI" secondAttribute="centerX" id="xZ7-i1-kcH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aHG-Wu-pIw"/>
                     </view>
                     <connections>
+                        <outlet property="passwordTxt" destination="B7I-vm-Djc" id="T8e-bM-MqJ"/>
+                        <outlet property="spinner" destination="cx4-cc-zia" id="BjY-aU-iEY"/>
+                        <outlet property="userNameTxt" destination="Ya8-ao-hW9" id="AWl-KY-EMc"/>
                         <segue destination="lDa-0r-A4h" kind="show" identifier="toCreateAccount" id="SJA-zN-4Py"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,8 @@
 		28D6DB6E222B03260008CD1D /* AvatarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6DB6D222B03260008CD1D /* AvatarPicker.swift */; };
 		28D6DB70222B0CC60008CD1D /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6DB6F222B0CC60008CD1D /* AvatarCell.swift */; };
 		28D6DB72222F02750008CD1D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6DB71222F02750008CD1D /* CircleImage.swift */; };
+		28D6DB75222F0FE20008CD1D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D6DB73222F0FE20008CD1D /* ProfileVC.swift */; };
+		28D6DB76222F0FE20008CD1D /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D6DB74222F0FE20008CD1D /* ProfileVC.xib */; };
 		28DB2325221C878700EAA32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DB2324221C878700EAA32C /* AppDelegate.swift */; };
 		28DB232A221C878700EAA32C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28DB2328221C878700EAA32C /* Main.storyboard */; };
 		28DB232C221C878800EAA32C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28DB232B221C878800EAA32C /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		28D6DB6D222B03260008CD1D /* AvatarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPicker.swift; sourceTree = "<group>"; };
 		28D6DB6F222B0CC60008CD1D /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		28D6DB71222F02750008CD1D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		28D6DB73222F0FE20008CD1D /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		28D6DB74222F0FE20008CD1D /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		28DB2321221C878700EAA32C /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DB2324221C878700EAA32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28DB2329221C878700EAA32C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		28D6DB77222F0FE60008CD1D /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				28D6DB74222F0FE20008CD1D /* ProfileVC.xib */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
 		28DB2318221C878700EAA32C = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +125,7 @@
 		28DB2323221C878700EAA32C /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				28D6DB77222F0FE60008CD1D /* XIBs */,
 				28D6DB6622248E260008CD1D /* Services */,
 				28ABCC05222092240031EF34 /* Utilities */,
 				28DB233B221F3AB900EAA32C /* Model */,
@@ -152,6 +165,7 @@
 				28DB2340221F3B1A00EAA32C /* ChannelVC.swift */,
 				28ABCC082220AAE20031EF34 /* LoginVC.swift */,
 				28ABCC0A2220B00B0031EF34 /* CreateAccountVC.swift */,
+				28D6DB73222F0FE20008CD1D /* ProfileVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D6DB76222F0FE20008CD1D /* ProfileVC.xib in Resources */,
 				28DB232F221C878800EAA32C /* LaunchScreen.storyboard in Resources */,
 				28DB232C221C878800EAA32C /* Assets.xcassets in Resources */,
 				28DB232A221C878700EAA32C /* Main.storyboard in Resources */,
@@ -295,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D6DB75222F0FE20008CD1D /* ProfileVC.swift in Sources */,
 				28DB2341221F3B1A00EAA32C /* ChannelVC.swift in Sources */,
 				28D6DB6A2225CD930008CD1D /* roundedButton.swift in Sources */,
 				28ABCC07222092410031EF34 /* Constants.swift in Sources */,
