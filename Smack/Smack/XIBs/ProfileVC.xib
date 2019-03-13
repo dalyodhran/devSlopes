@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="EBn-GB-7mL" id="aKf-58-BVb"/>
+                <outlet property="profileImg" destination="7wy-aR-GWd" id="zsI-GL-Xu3"/>
+                <outlet property="userEmail" destination="FeT-0l-as4" id="D64-vo-HO1"/>
+                <outlet property="userName" destination="F2G-C8-4kX" id="HO6-Ad-gFs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBn-GB-7mL" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ye2-ku-uiP">
+                    <rect key="frame" x="20" y="153.5" width="335" height="360"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUu-uE-Fl6">
+                            <rect key="frame" x="299" y="8" width="28" height="28"/>
+                            <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeModalPressed:" destination="-1" eventType="touchUpInside" id="DeI-ug-DUN"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="CHe-Gk-oNP">
+                            <rect key="frame" x="92" y="55" width="151" height="210.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-X6-grt">
+                                    <rect key="frame" x="12" y="0.0" width="127" height="27.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                    <color key="textColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="7wy-aR-GWd" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
+                                    <rect key="frame" x="25.5" y="41.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="23c-dR-fBx"/>
+                                        <constraint firstAttribute="width" constant="100" id="hqm-bd-lW2"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Odhrán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2G-C8-4kX">
+                                    <rect key="frame" x="46.5" y="155.5" width="58.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="odhran@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeT-0l-as4">
+                                    <rect key="frame" x="0.0" y="190" width="151" height="20.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                    <color key="textColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Teq-TK-VDD">
+                            <rect key="frame" x="135" y="317" width="65" height="35"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                            <state key="normal" title="Logout"/>
+                            <connections>
+                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="ZQI-Wr-cuD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Teq-TK-VDD" firstAttribute="centerX" secondItem="ye2-ku-uiP" secondAttribute="centerX" id="0qE-Ba-Qnl"/>
+                        <constraint firstItem="CHe-Gk-oNP" firstAttribute="centerY" secondItem="ye2-ku-uiP" secondAttribute="centerY" constant="-20" id="54S-Yr-auT"/>
+                        <constraint firstItem="ZUu-uE-Fl6" firstAttribute="top" secondItem="ye2-ku-uiP" secondAttribute="top" constant="8" id="5pY-so-2EF"/>
+                        <constraint firstAttribute="trailing" secondItem="ZUu-uE-Fl6" secondAttribute="trailing" constant="8" id="AdJ-1e-FfF"/>
+                        <constraint firstItem="CHe-Gk-oNP" firstAttribute="centerX" secondItem="ye2-ku-uiP" secondAttribute="centerX" id="Bjd-6I-g7y"/>
+                        <constraint firstAttribute="height" constant="360" id="Dpn-7B-eDV"/>
+                        <constraint firstAttribute="bottom" secondItem="Teq-TK-VDD" secondAttribute="bottom" constant="8" id="EzP-Dp-N1T"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ye2-ku-uiP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5xU-dD-fdM"/>
+                <constraint firstItem="EBn-GB-7mL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IjU-4F-Esy"/>
+                <constraint firstItem="ye2-ku-uiP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XsO-5f-ar6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ye2-ku-uiP" secondAttribute="trailing" constant="20" id="e6Z-rU-Cac"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EBn-GB-7mL" secondAttribute="trailing" id="guY-AO-fs3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EBn-GB-7mL" secondAttribute="bottom" id="i3Q-RG-30K"/>
+                <constraint firstItem="EBn-GB-7mL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="puF-iE-APg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="profileDefault" width="192" height="192"/>
+    </resources>
+</document>
