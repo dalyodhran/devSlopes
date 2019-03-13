@@ -28,7 +28,11 @@ class AuthService {
     
     var authToke: String {
         get{
-            return (defaults.value(forKey: TOKEN_KEY)as! String)
+            if defaults.value(forKey: TOKEN_KEY) != nil{
+                return defaults.value(forKey: TOKEN_KEY)as! String
+            }else {
+                return "random String"
+            }
         }
         set{
             defaults.set(newValue, forKey: TOKEN_KEY)
