@@ -80,8 +80,8 @@ class AuthService {
             "password": password
         ]
         
-        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (repsonse) in
-            if repsonse.result.error == nil {
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            if response.result.error == nil {
                 
 //                if let json = repsonse.result.value as? Dictionary<String, Any>{
 //                    if let email = json["user"] as? String{
@@ -95,7 +95,7 @@ class AuthService {
                 
                 //Using Swifty JSON
                 
-                guard let data = repsonse.data else { return }
+                guard let data = response.data else { return }
                 do {
                     let json = try JSON(data: data)
                     self.userEmail = json["user"].stringValue
@@ -111,7 +111,7 @@ class AuthService {
                 completion(true)
             }else {
                 completion(false)
-                debugPrint(repsonse.result.error as Any)
+                debugPrint(response.result.error as Any)
             }
         }
     }
@@ -127,7 +127,7 @@ class AuthService {
             "avatarColor": avatarColor
         ]
         
-        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (repsonse) in
+        Alamofire.request(URL_USER_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseString { (repsonse) in
             
             if repsonse.result.error == nil {
                 

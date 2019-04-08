@@ -71,17 +71,18 @@ class MessageService{
                             
                             let message = Message(message: messageBody, userName: userName, channelId: channelId, userAvatar: userAvatar, userAvatarColor: userAvatarColor, id: id, timeStamp: timeStamp)
                             self.messages.append(message)
-                            print(message)
+                            print(self.messages)
                         }
                     }
                 }catch let error {
-                    debugPrint(error as Any)
+                    debugPrint("Shit")
                 }
                 
                 completion(true)
                 
             }else {
                 debugPrint(response.result.error as Any)
+                print("Double shit")
                 completion(false)
             }
         }
