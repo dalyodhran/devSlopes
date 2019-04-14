@@ -29,7 +29,7 @@ class MessageService{
                         for item in json {
                             let name = item["name"].stringValue
                             let channelDescription = item["description"].stringValue
-                            let id = item["id"].stringValue
+                            let id = item["_id"].stringValue
                             let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                             self.channels.append(channel)
                         }
@@ -41,6 +41,7 @@ class MessageService{
                 completion(true)
             }else {
                 completion(false)
+                print("Error finding all channels")
                 debugPrint(response.result.error as Any)
             }
         }
@@ -59,7 +60,7 @@ class MessageService{
                 guard let data = response.data else { return }
                 
                 do {
-                    if let json = try JSON(data: data).array{
+                    if let json = try JSON(data: data).array {
                         for item in json {
                             let messageBody = item["messageBody"].stringValue
                             let channelId = item["channelId"].stringValue
@@ -74,15 +75,15 @@ class MessageService{
                             print(self.messages)
                         }
                     }
-                }catch let error {
+                }catch _ {
                     debugPrint("Shit")
                 }
                 
                 completion(true)
                 
             }else {
-                debugPrint(response.result.error as Any)
-                print("Double shit")
+                debugPrint("bullshit")
+                
                 completion(false)
             }
         }
